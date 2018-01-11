@@ -6,7 +6,7 @@ services:
 addons:
   apt:
     sources:
-      - key_url: 'https://deb.nodesource.com/gpgkey/nodesource.gpg.key"
+      - key_url: 'https://deb.nodesource.com/gpgkey/nodesource.gpg.key'
       - sourceline: 'deb https://deb.nodesource.com/node_8.x trusty main'
     packages:
       - docker-ce
