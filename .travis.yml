@@ -1,16 +1,16 @@
 sudo: required
 
-language: node_js
-node_js:
-  - "8"
-
 services:
   - docker
 
 addons:
   apt:
+    sources:
+      - key_url: 'https://deb.nodesource.com/gpgkey/nodesource.gpg.key"
+      - sourceline: 'deb https://deb.nodesource.com/node_8.x trusty main'
     packages:
       - docker-ce
+      - nodejs
       - kpartx
       - qemu-user-static
       - aria2
