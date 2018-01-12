@@ -6,6 +6,7 @@ services:
 cache:
   directories:
   - .images
+  - .apt_cache
 
 addons:
   apt:
@@ -21,6 +22,8 @@ install:
 before_script:
   - mkdir -p .images images && ls -al .images/
   - cp -i .images/* images/. | true
+  - mkdir -p .apt_cache
+  - ln -s .apt_cache apt_cache
 
 script:
   - ./get_ssh_keys.py && sudo ./treehouse-builder --noninteractive
