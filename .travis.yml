@@ -24,6 +24,7 @@ before_script:
   - cp -i .images/* images/. | true
   - mkdir -p .apt_cache
   - ln -s .apt_cache apt_cache
+  - ls -latr .apt_cache/
 
 script:
   - ./get_ssh_keys.py && sudo ./treehouse-builder --noninteractive
